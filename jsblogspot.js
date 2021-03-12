@@ -1,4 +1,4 @@
-<script type = 'text / javascript'>
+
 // <! [CDATA [
 function labelthumbs (json) {document.write ('<ul id = "label_with_thumbs">'); for (var i = 0; i <numposts; i ++) {var entry = json.feed.entry [i]; var posttitle = entry.title. $ t; var posturl; if (i == json.feed.entry.length) break; for (var k = 0; k <entry.link.length; k ++) {if (entry.link [k] .rel == 'replies' && entry.link [k] .type == 'text / html') {var commenttext = entry.link [ k] .title; var commenturl = entry.link [k] .href;}
 if (entry.link [k] .rel == 'alternate') {posturl = entry.link [k] .href; break;}} var thumburl; try {thumburl = entry.media $ thumbnail.url;} catch (error)
@@ -15,4 +15,4 @@ if (showcommentnum == true)
 if (commenttext ==' 1 Comments ') commenttext =' 1 Comment '; if (commenttext ==' 0 Comments ') commenttext =' No Comments '; commenttext =' <a href = "'+ commenturl +'" target = "_ top"> '+ commenttext +' </a> '; towrite = towrite + commenttext; flag = 1 ;;}
 if (displaymore == true)
 {if (flag == 1) towrite = towrite +' | '; towrite = towrite +' <a href="'+posturl+'" class="url" target ="_top"> Thêm »</a> '; flag = 1 ;;
-</script>
+
